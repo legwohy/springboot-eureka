@@ -1,0 +1,11 @@
+
+server:
+  port: 6062  #服务端口号 相同服务的提供者 端口不能冲突
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://127.0.0.1:5566/eureka/
+spring:
+  application:
+    name: service-provider #服务名称--调用的时候根据名称来调用该服务的方法
+

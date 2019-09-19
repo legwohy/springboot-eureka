@@ -1,0 +1,10 @@
+eureka:
+  client:
+    serviceUrl: #\u6CE8\u518C\u4E2D\u5FC3\u7684\u6CE8\u518C\u5730\u5740
+      defaultZone: http://127.0.0.1:5566/eureka/
+server:
+  port: 7072  #\u670D\u52A1\u7AEF\u53E3\u53F7
+spring:
+  application:
+    name: service-consumer #\u670D\u52A1\u540D\u79F0--\u8C03\u7528\u7684\u65F6\u5019\u6839\u636E\u540D\u79F0\u6765\u8C03\u7528\u8BE5\u670D\u52A1\u7684\u65B9\u6CD5
+

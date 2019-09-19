@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-server  # 服务名称
+  profiles:
+    active: dev
+
+# server\u9ED8\u8BA4\u662Fclient
+server:
+  port: 5566 #\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\u7AEF\u53E3\u53F7
+eureka:
+  instance:
+    hostname: 127.0.0.1 #\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3IP\u5730\u5740
+  client:
+    registerWithEureka: false #\u662F\u5426\u5411\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\u6CE8\u518C\u81EA\u5DF1
+    fetchRegistry: false #\u662F\u5426\u68C0\u7D22\u670D\u52A1
+    serviceUrl: #配置默认节点有信息，这里是获取本机的ip和端口来实现，如果不配置，默认会找8761端口，
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
